@@ -1,0 +1,391 @@
+/* 全局重置和基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* 定义动画 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2ecc71;
+}
+
+/* 导航栏样式 */
+#header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.4s ease;
+  padding: 15px 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#normal-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+#nav-bar ul {
+  display: flex;
+  list-style: none;
+}
+
+#nav-bar li {
+  margin: 0 15px;
+}
+
+#nav-bar a {
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+#nav-bar a:hover {
+  background-color: #2ecc71;
+  color: white;
+}
+
+/* 响应式导航栏 */
+#responsive-header {
+  display: none;
+}
+
+/* 英雄区域样式 */
+#hero-header {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url(https://cdn.glitch.global/ff961597-ebdb-40a5-a99c-791788a593cd/shu.png?v=1647006437568);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+#hero-content {
+  max-width: 800px;
+}
+
+#hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.2s forwards;
+}
+
+#hero
+
+#hero-button {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#hero-button:hover {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 主要内容区域 */
+#main {
+  padding: 40px 20px;
+}
+
+/* 特性部分 */
+#features-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+#features-description {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#features-description h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+#lightgreen-text {
+  color: #2ecc71;
+}
+
+#title-text-separator {
+  width: 60px;
+  border: none;
+  height: 3px;
+  background-color: #2ecc71;
+  margin: 15px auto;
+}
+
+/* 项目卡片样式 */
+#service-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+#feature {
+  flex: 1;
+  min-width: 250px;
+  max-width: 280px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#feature.show {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+#feature:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+#feature-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+#feature p {
+  margin-bottom: 25px;
+  color: #666;
+  flex-grow: 1;
+}
+
+#feature-button {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#feature-button:hover {
+  background-color: #27ae60;
+}
+
+/* 展示部分样式 */
+#presentation-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+#presentation-title-description {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#presentation-title-description h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+/* 同学作品展示按钮 */
+#section-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.product-button {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.product-button:hover, .product-button-active {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.product-button:hover a {
+  color: white;
+}
+
+#section-content-container {
+  margin-top: 40px;
+}
+
+/* 响应式设计 */
+@media (max-width: 860px) {
+  /* 导航栏 */
+  #normal-header {
+    display: none;
+  }
+  
+  #responsive-header {
+    display: block;
+    padding: 15px 20px;
+  }
+  
+  #responsive-logo-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #image-button-black {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  #dropdown-button-black {
+    width: 30px;
+    height: 30px;
+  }
+  
+  #responsive-nav-bar {
+    display: none;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  #responsive-nav-bar li {
+    margin: 15px 0;
+  }
+  
+  /* 项目卡片 */
+  #service-features {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #feature {
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  /* 同学作品展示按钮 */
+  .product-button {
+    width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 480px) {
+  #hero-title {
+    font-size: 2.5rem;
+  }
+  
+  #features-description h1, 
+  #presentation-title-description h1 {
+    font-size: 2rem;
+  }
+  
+  .product-button {
+    width: 100%;
+  }
+}

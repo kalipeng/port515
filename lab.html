@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interaction Lab</title>
+  
+  <!-- 字体 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- 样式表 -->
+  <link rel="stylesheet" href="/lab.css">
+  
+  <!-- 字体图标 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <header id="header">
+    <div id="normal-header">
+      <a href="index.html" class="logo">
+        <h2>Interaction Lab</h2>
+      </a>
+      
+      <nav id="nav-bar">
+        <ul>
+          <li class="nav-link"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li class="nav-link"><a href="lab.html"><i class="fas fa-flask"></i> Interaction Lab</a></li>
+        
+          <li class="nav-link"><a href="https://kellypeng.co"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+        
+        </ul>
+      </nav>
+    </div>
+
+    <!-- 响应式导航栏 -->
+    <div id="responsive-header">
+      <div id="responsive-logo-button">
+        <a href="index.html" class="logo">
+          <h2>Interaction Lab</h2>
+        </a>
+        
+        <button id="image-button-black">
+          <i class="fas fa-bars fa-2x"></i>
+        </button>
+      </div>
+
+      <nav id="responsive-nav-bar">
+        <ul>
+          <li class="nav-link"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li class="nav-link"><a href="lab.html"><i class="fas fa-flask"></i> Interaction Lab</a></li>
+          <li class="nav-link"><a href="studio.html"><i class="fas fa-palette"></i> Studio</a></li>
+          <li class="nav-link"><a href="https://kellypeng.co"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+          <li class="nav-link"><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 英雄区域 -->
+  <section id="hero-header">
+    <div id="hero-content">
+      <h1 id="hero-title">Interaction Lab</h1>
+      <p id="hero-text">This website showcases the projects I completed in the Interaction Lab course.<br>It also links to my classmates' excellent works.</p>
+      <a href="#features-container"><button id="hero-button">View Projects <i class="fas fa-arrow-down"></i></button></a>
+    </div>
+  </section>
+
+  <main id="main">
+    <!-- 项目展示区 -->
+    <section id="features-container">
+      <div id="features-description">
+        <h1>My <span id="lightgreen-text">Projects</span></h1>
+        <hr id="title-text-separator">
+        <p>Here are a series of projects I completed in the Interaction Lab course, demonstrating my design and development skills.</p>
+      </div>
+
+      <!-- 项目卡片 -->
+      <div id="service-features">
+        <div id="feature">
+          <i class="fas fa-pencil-ruler fa-3x" style="color: #2ecc71; margin-bottom: 20px;"></i>
+          <h2 id="feature-title">Project 1</h2>
+          <p>Web Prototype Design - Interactive prototypes created with Figma</p>
+          <a href="https://www.figma.com/file/hO8UD3uht7re54yoXUHsqG/web-draft-*3?node-id=0%3A1">
+            <button id="feature-button">View Details <i class="fas fa-external-link-alt"></i></button>
+          </a>
+        </div>
+
+        <div id="feature">
+          <i class="fas fa-laptop-code fa-3x" style="color: #2ecc71; margin-bottom: 20px;"></i>
+          <h2 id="feature-title">Project 2</h2>
+          <p>Responsive Website Practice - Responsive design implementation based on a demo</p>
+          <a href="https://aspiring-decorous-sturgeon.glitch.me/">
+            <button id="feature-button">View Details <i class="fas fa-external-link-alt"></i></button>
+          </a>
+        </div>
+
+        <div id="feature">
+          <i class="fas fa-mobile-alt fa-3x" style="color: #2ecc71; margin-bottom: 20px;"></i>
+          <h2 id="feature-title">Project 3</h2>
+          <p>Personal Website Responsive Optimization - Added responsive features to my own page</p>
+          <a href="#">
+            <button id="feature-button">View Details <i class="fas fa-external-link-alt"></i></button>
+          </a>
+        </div>
+
+        <div id="feature">
+          <i class="fas fa-code fa-3x" style="color: #2ecc71; margin-bottom: 20px;"></i>
+          <h2 id="feature-title">Project 4</h2>
+          <p>To Be Determined - Unassigned Interaction Lab project</p>
+          <a href="#">
+            <button id="feature-button">View Details <i class="fas fa-external-link-alt"></i></button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 同学作品展示区 -->
+    <section id="presentation-container">
+      <div id="presentation-title-description">
+        <h1><span id="lightgreen-text">Classmates' Works</span></h1>
+        <hr id="title-text-separator">
+        <p>Click the buttons below to view my classmates' excellent works.</p>
+      </div>
+
+      <div id="section-buttons">
+        <button class="product-button">
+          <a href="https://faye-arranz-main.glitch.me/">Faye Arranz <i class="fas fa-external-link-alt"></i></a>
+        </button>
+
+        <button class="product-button">
+          <a href="https://zein-homepage.glitch.me/index.html">Zein Bdeir <i class="fas fa-external-link-alt"></i></a>
+        </button>
+
+        <button class="product-button">
+          <a href="https://noahfarjani-webring.glitch.me/index.html">Noah Farjani <i class="fas fa-external-link-alt"></i></a>
+        </button>
+
+        <button class="product-button">
+          <a href="https://hina-fernstrom-interaction-web.glitch.me/index.html">Hina Fernstrom <i class="fas fa-external-link-alt"></i></a>
+        </button>
+        
+        <button class="product-button">
+          <a href="https://ellianahauinteraction.glitch.me/index.html">Elliana Hau <i class="fas fa-external-link-alt"></i></a>
+        </button>
+
+        <button class="product-button">
+          <a href="https://parkj181.github.io/interactionlabp1/">Lok Yin <i class="fas fa-external-link-alt"></i></a>
+        </button>
+
+        <button class="product-button">
+          <a href="https://kanl905.github.io/s22-webring/">Jasmine Kan <i class="fas fa-external-link-alt"></i></a>
+        </button>
+
+        <button class="product-button">
+          <a href="https://kokc099.github.io/Webring/">Claudia Kok <i class="fas fa-external-link-alt"></i></a>
+        </button>
+        
+        <button class="product-button">
+          <a href="https://lcx2002.github.io/webring/">Chenxiao Li <i class="fas fa-external-link-alt"></i></a>
+        </button>
+
+        <button class="product-button">
+          <a href="https://hajindol.github.io/webring/">Hajin Son <i class="fas fa-external-link-alt"></i></a>
+        </button>
+
+        <button class="product-button">
+          <a href="https://zein-homepage.glitch.me/index.html">Rand Rivera <i class="fas fa-external-link-alt"></i></a>
+        </button>
+
+        <button class="product-button">
+          <a href="https://zein-homepage.glitch.me/index.html">Junyong Park <i class="fas fa-external-link-alt"></i></a>
+        </button>
+        
+        <button class="product-button">
+          <a href="https://zein-homepage.glitch.me/index.html">Xin-Yi Yu <i class="fas fa-external-link-alt"></i></a>
+        </button>
+
+        <button class="product-button">
+          <a href="https://zein-homepage.glitch.me/index.html">Jinyi Zhang <i class="fas fa-external-link-alt"></i></a>
+        </button>
+      </div>
+
+      <div id="section-content-container"></div>
+    </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Interaction Lab. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 脚本 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="/lab.js"></script>
+</body>
+</html>

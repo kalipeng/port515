@@ -1,0 +1,125 @@
+
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Shizuru', cursive;
+font-family: 'Varela Round', sans-serif;
+
+body {
+  font-family:'Roboto', sans-serif
+}
+ body {
+  background-color: white;
+}
+
+ul{
+list-style-type:none;
+}
+
+
+
+
+.nav li a{
+ text-decoration:none;
+position: absolute;
+width: 409px;
+height: 45px;
+left: 122px;
+top: 82px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 42px;
+
+color: #000000;
+
+ 
+
+}
+.studio li a{
+  text-decoration:none;
+position: absolute;
+width: 503px;
+height: 45px;
+left: 532px;
+top: 92px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 21px;
+
+color: #000000;
+
+;
+
+
+  
+}
+
+
+
+.about li a{
+  
+  text-decoration:none;
+position: absolute;
+width: 503px;
+height: 33px;
+left: 874px;
+top: 92px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 21px;
+
+color: #000000;
+
+}
+.portfoilo li a{
+text-decoration:none;
+position: absolute;
+width: 503px;
+height: 45px;
+left: 1225px;
+top: 92px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 21px;
+
+color: #000000;
+}
+
+
+.intro a {
+  
+text-decoration:none;
+position: absolute;
+width: 314px;
+height: 651px;
+left: 132px;
+top: 202px;
+overflow-y: scroll;
+   line-height:2;
+  color:black
+  
+}
+
+img {
+  
+ position: absolute;
+width: 1000px;
+height: 544px;
+left: 334px;
+top: 220px;
+
+background: url(p1.png);
+  
+}
+
