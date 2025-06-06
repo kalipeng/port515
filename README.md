@@ -1,172 +1,212 @@
-# Interactive Lab Website
+# Interactive Lab Portfolio Website
 
 ## Overview
 
-This project is a redesigned website for the Interactive Lab course, featuring a modern UI, responsive design, and smooth animations. It serves as a platform to showcase both personal projects and classmates' works in an engaging and visually appealing manner.
+A modern, responsive Flask web application showcasing Interactive Lab course projects and classmates' works. Features a bilingual interface with clean design, smooth animations, and mobile-friendly navigation.
 
-## Features
+## ✨ Features
 
-- **Modern Design**: Clean and contemporary UI with carefully selected color schemes
-- **Fully Responsive**: Seamlessly adapts to all device sizes from mobile to desktop
-- **Animated Elements**: Subtle animations enhance the user experience
-- **Flask Backend**: Simple Python Flask application for easy deployment
-- **Project Showcase**: Dedicated sections for displaying personal and classmates' projects
-- **Easy Navigation**: Intuitive menu system for desktop and mobile
+- **🏠 Personal Homepage**: Minimalist design with custom button interactions and typography
+- **🧪 Interactive Lab Section**: Comprehensive project showcase with 4+ course projects
+- **👥 Classmates Gallery**: Direct links to fellow students' portfolio websites
+- **📱 Responsive Design**: Seamlessly adapts to desktop, tablet, and mobile devices
+- **🎨 Modern UI**: Clean typography, smooth animations, and professional styling
+- **🌐 Bilingual Interface**: Support for English and Chinese content
+- **⚡ Fast Loading**: Optimized static assets and efficient Flask routing
 
-## Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
 
 - Python 3.7 or higher
 - pip package manager
 
-### Installation
+### Installation & Setup
 
-1. Clone the repository:
+1. **Clone or download the project**:
    ```bash
-   git clone https://github.com/yourusername/interactive-lab.git
-   cd interactive-lab
+   git clone <your-repo-url>
+   cd port515
    ```
 
-2. Create and activate a virtual environment:
-   ```bash
-   python -m venv venv
-   
-   # On Windows
-   venv\Scripts\activate
-   
-   # On macOS/Linux
-   source venv/bin/activate
-   ```
-
-3. Install dependencies:
+2. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Run the application:
+3. **Run the application**:
    ```bash
    python app.py
    ```
 
-5. Open your browser and visit:
-   ```
-   http://localhost:8080
-   ```
+4. **Access the website**:
+   - Open your browser and visit: `http://localhost:8080`
+   - Lab section: `http://localhost:8080/lab`
+   - Studio page: `http://localhost:8080/studio`
+   - About page: `http://localhost:8080/about`
 
-## Project Structure
+## 📁 Project Structure
 
 ```
-/interactive-lab/
+port515/
+├── app.py                    # Flask application with routes
+├── requirements.txt          # Python dependencies
+├── README.md                # Project documentation
 │
-├── app.py                # Flask application entry point
-├── requirements.txt      # Project dependencies
-├── Procfile              # For Heroku deployment
+├── templates/               # HTML templates
+│   ├── index.html          # Homepage with personal branding
+│   ├── lab.html            # Interactive lab projects showcase
+│   ├── studio.html         # Studio page
+│   ├── about.html          # About page
+│   └── nav.html            # Navigation component
 │
-├── templates/            # HTML templates
-│   ├── index.html        # Home page
-│   ├── lab.html          # Interactive lab page
-│   ├── studio.html       # Studio page
-│   └── about.html        # About page
-│
-└── static/               # Static assets
-    ├── css/              # CSS stylesheets
-    │   ├── lab.css       # Styles for lab page
-    │   └── style.css     # Global styles
+└── static/                 # Static assets
+    ├── css/                # Stylesheets
+    │   ├── style.css       # Main homepage styles
+    │   ├── lab.css         # Lab section styles
+    │   └── nav.css         # Navigation styles
     │
-    ├── js/               # JavaScript files
-    │   └── lab.js        # Interactive functionality
-    │
-    └── img/              # Image assets
+    └── js/                 # JavaScript files
+        ├── script.js       # Homepage interactions
+        └── lab.js          # Lab section functionality
 ```
 
-## Customization
+## 🎯 Current Features
 
-### Changing the Color Scheme
+### Homepage (`/`)
+- **Personal Branding**: Features "彭天怡" (Kelly Peng) with interactive hover effects
+- **Custom Typography**: Multiple Google Fonts and Adobe Typekit integration
+- **Minimalist Navigation**: Clean menu with hover effects
+- **Responsive Design**: Mobile-friendly layout
 
-The main color scheme can be easily modified by updating the color variables in `static/css/lab.css`:
+### Lab Section (`/lab`)
+- **Project Showcase**: 4 Interactive Lab projects including:
+  - Web Prototype Design (Figma)
+  - Responsive Website Practice
+  - Personal Website Optimization
+  - Additional course projects
+- **Classmates Gallery**: Direct links to 14+ classmate portfolios
+- **Modern UI**: Green accent theme with Font Awesome icons
+- **Smooth Animations**: Hover effects and transitions
 
-```css
-/* Example: Change primary color from green to blue */
-#lightgreen-text {
-  color: #3498db; /* Change from #2ecc71 to blue */
-}
+### Additional Pages
+- **Studio** (`/studio`): Placeholder for studio work
+- **About** (`/about`): Personal information page
 
-#hero-button, #feature-button {
-  background-color: #3498db; /* Change from #2ecc71 to blue */
-}
-```
+## 🛠️ Customization
 
 ### Adding New Projects
 
-To add a new project to the showcase section, edit the `lab.html` file:
-
-1. Locate the `service-features` section
-2. Add a new project card following the existing pattern
-3. Update the title, description, and link
+Edit `templates/lab.html` and add a new project card in the `service-features` section:
 
 ```html
 <div id="feature">
-  <i class="fas fa-code fa-3x" style="color: #2ecc71; margin-bottom: 20px;"></i>
-  <h2 id="feature-title">New Project</h2>
-  <p>Description of your new amazing project</p>
-  <a href="your-project-link">
+  <i class="fas fa-your-icon fa-3x" style="color: #2ecc71; margin-bottom: 20px;"></i>
+  <h2 id="feature-title">Your Project Title</h2>
+  <p>Project description here</p>
+  <a href="your-project-url">
     <button id="feature-button">View Details <i class="fas fa-external-link-alt"></i></button>
   </a>
 </div>
 ```
 
-## Responsive Design
+### Updating Personal Information
 
-The website is designed to work seamlessly across different devices:
+- **Homepage**: Edit `templates/index.html` to change personal branding
+- **Navigation**: Update menu items in both `index.html` and `lab.html`
+- **Styling**: Modify CSS files in `static/css/` for design changes
 
-- **Desktop**: Full layout with expanded navigation
-- **Tablet**: Adjusted spacing and layout for medium screens
-- **Mobile**: Hamburger menu and stacked content for optimal mobile experience
+### Adding Classmates' Work
 
-## Deployment
+In `templates/lab.html`, add new buttons in the `section-buttons` div:
 
-### Deploy to Heroku
+```html
+<button class="product-button">
+  <a href="student-portfolio-url">Student Name <i class="fas fa-external-link-alt"></i></a>
+</button>
+```
 
-1. Make sure you have the Heroku CLI installed and are logged in
-2. Create a new Heroku app:
-   ```bash
-   heroku create your-interactive-lab
+## 🎨 Styling Guide
+
+### Color Scheme
+- **Primary Green**: `#2ecc71` (buttons, accents)
+- **Text**: Black on white background
+- **Hover Effects**: Subtle background changes
+
+### Typography
+- **Homepage**: Multiple font families including Liu Jian Mao Cao, Raleway, Roboto
+- **Lab Section**: Noto Sans font family
+- **Navigation**: Monospace fonts
+
+### Responsive Breakpoints
+- **Desktop**: Full navigation and layout
+- **Tablet**: Adjusted spacing and typography
+- **Mobile**: Hamburger menu and stacked content
+
+## 🚀 Deployment Options
+
+### Local Development
+```bash
+python app.py
+# Runs on http://localhost:8080
+```
+
+### Production Deployment
+
+#### Heroku
+1. Install Heroku CLI
+2. Create `Procfile`:
    ```
-
-3. Push to Heroku:
+   web: python app.py
+   ```
+3. Deploy:
    ```bash
+   heroku create your-app-name
    git push heroku main
    ```
 
-4. Open your deployed application:
-   ```bash
-   heroku open
-   ```
+#### Other Platforms
+- **Vercel**: Use Vercel's Python runtime
+- **DigitalOcean**: App Platform or Droplet
+- **AWS**: Elastic Beanstalk or EC2
 
-### Deploy to Other Platforms
+## 🔧 Technical Details
 
-The application can be deployed to any platform that supports Python:
+- **Backend**: Flask 2.3.3
+- **Frontend**: HTML5, CSS3, JavaScript (jQuery)
+- **Icons**: Font Awesome 5.15.4
+- **Fonts**: Google Fonts + Adobe Typekit
+- **Responsive**: CSS Grid and Flexbox
 
-- **Vercel**: Use the Vercel Python runtime
-- **AWS**: Deploy using Elastic Beanstalk or EC2
-- **DigitalOcean**: Use App Platform or a Droplet
+## 📝 Development Notes
 
-## Contributing
+- Flask automatically serves static files from `/static/` directory
+- Templates use Jinja2 syntax with `url_for()` for proper routing
+- Debug mode enabled for development (disable for production)
+- Cross-platform compatibility (Windows, macOS, Linux)
 
-Contributions are welcome! Feel free to:
+## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+2. Create a feature branch: `git checkout -b feature-name`
+3. Make your changes
+4. Test locally: `python app.py`
+5. Commit: `git commit -m "Add feature"`
+6. Push: `git push origin feature-name`
+7. Create a Pull Request
 
+## 📄 License
 
-## Acknowledgements
+This project is open source and available under the [MIT License](LICENSE).
 
-- Font Awesome for the icons
-- Google Fonts for typography
-- jQuery for interactive elements
-- All classmates who contributed their projects
+## 🙏 Acknowledgments
+
+- Interactive Lab course instructors and classmates
+- Font Awesome for icons
+- Google Fonts and Adobe Typekit for typography
+- Flask community for excellent documentation
+
+---
+
+*Built with ❤️ by Kelly Peng (彭天怡)*
 
